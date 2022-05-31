@@ -1,0 +1,126 @@
+{
+  "sections": {
+    "16454609508bd6fe7a": {
+      "type": "background-video-text",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "color_border": "#f4f4f4",
+        "layout": "left",
+        "height": 750
+      }
+    },
+    "16454610527f2759bc": {
+      "type": "faq",
+      "blocks": {
+        "164546105294b3cb6c-0": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "164546105294b3cb6c-1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164546105294b3cb6c-0",
+        "164546105294b3cb6c-1"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "16454611055e903234": {
+      "type": "featured-product",
+      "blocks": {
+        "164546110471569422-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "164546110471569422-2": {
+          "type": "variant_picker",
+          "settings": {
+            "size_chart": "",
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "c1bf318c-a999-4340-b1e1-048ef858c2d6": {
+          "type": "tab",
+          "settings": {
+            "title": "Innehåll",
+            "content": "",
+            "page": "ett-recyclers-set-innehaller"
+          }
+        },
+        "0735ba57-278a-48b2-89ab-f2630c925df4": {
+          "type": "tab",
+          "settings": {
+            "title": "Produktfakta",
+            "content": "<p>djup: 18,2 cm med lock, utan RBM 17,3 cm, PEM 17,7 cm<br\/>bredd: 27,5 cm med handtag<br\/>höjd: 36 cm med lock<br\/>vikt: PEM 1,3 kg RBM 0,9 kg<br\/>volym: PEM 9,5 liter RBM 11 liter<\/p>",
+            "page": ""
+          }
+        },
+        "164546110471569422-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "164546110471569422-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        },
+        "5a5376ff-5fdc-4885-8c6e-a4342ad004f0": {
+          "type": "tab",
+          "settings": {
+            "title": "Passar de in i mina köksskåp?",
+            "content": "",
+            "page": "space-requirements-for-kitchen-cabinets"
+          }
+        }
+      },
+      "block_order": [
+        "164546110471569422-1",
+        "164546110471569422-2",
+        "c1bf318c-a999-4340-b1e1-048ef858c2d6",
+        "0735ba57-278a-48b2-89ab-f2630c925df4",
+        "164546110471569422-0",
+        "164546110471569422-3",
+        "5a5376ff-5fdc-4885-8c6e-a4342ad004f0"
+      ],
+      "settings": {
+        "featured_product": "green-lizzie-recyklers-set",
+        "divider": true,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    }
+  },
+  "order": [
+    "16454609508bd6fe7a",
+    "16454610527f2759bc",
+    "16454611055e903234"
+  ]
+}
