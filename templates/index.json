@@ -1,126 +1,352 @@
 {
   "sections": {
-    "16454609508bd6fe7a": {
-      "type": "background-video-text",
+    "image_with_text_slide": {
+      "type": "image_with_text_slide",
+      "settings": {}
+    },
+    "video_with_text": {
+      "type": "video_with_text",
+      "settings": {}
+    },
+    "full-image-column": {
+      "type": "full-image-column",
+      "settings": {}
+    },
+    "compare_image_with_text": {
+      "type": "compare_image_with_text",
+      "settings": {}
+    },
+    "multicolumn_slide": {
+      "type": "multicolumn-slide",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {}
+    },
+    "discover": {
+      "type": "discover",
+      "settings": {}
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Vos cheveux instantanément plus dense",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Découvrez les fibres Keraneo",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Commander",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
-        "subtitle": "",
-        "title": "",
-        "text": "",
+        "image": "shopify:\/\/shop_images\/avant_apres_poudre_keratine_2093857015.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "165218638476eb6e19": {
+      "type": "multicolumn",
+      "blocks": {
+        "165218638435fe6244-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/COTON.jpg",
+            "title": "COTON",
+            "text": "<p>Les fibres Keraneo sont naturelles et issue de la fibre de coton dont les molécules ressemblent étroitement à la structure d’un cheveu humain ce qui le rends presque impossible à détecter une fois appliqué. <br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "165218638435fe6244-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MINERAUX.jpg",
+            "title": "MINÉRAUX",
+            "text": "<p>Nos fibres sont colorées à base de teintes de minéraux naturels spécialement mélangés pour atteindre une correspondance parfaite. <br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "165218638435fe6244-0",
+        "165218638435fe6244-1"
+      ],
+      "settings": {
+        "title": "Fait à base de seulement 2 ingrédients naturels",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "color_border": "#f4f4f4",
-        "layout": "left",
-        "height": 750
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "16454610527f2759bc": {
-      "type": "faq",
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Nos produits",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "inverse",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "165218661313c63b0c": {
+      "type": "slideshow",
       "blocks": {
-        "164546105294b3cb6c-0": {
-          "type": "question",
+        "16521866134120cd61-0": {
+          "type": "slide",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "image": "shopify:\/\/shop_images\/AVANT_APRES_KERANEO-1.jpg",
+            "heading": "Des résultats prouvés",
+            "heading_size": "h1",
+            "subheading": "avant\/après avec KERANEO",
+            "button_label": "COMMANDER",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
           }
         },
-        "164546105294b3cb6c-1": {
-          "type": "question",
+        "16521866134120cd61-1": {
+          "type": "slide",
           "settings": {
-            "title": "Frequently asked question",
-            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+            "image": "shopify:\/\/shop_images\/AVANT_APRES_KERANEO3.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "30142b34-3117-4a3c-b024-6abb93fc0ac9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/AVANT_APRES_KERANEO1.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "164546105294b3cb6c-0",
-        "164546105294b3cb6c-1"
+        "16521866134120cd61-0",
+        "16521866134120cd61-1",
+        "30142b34-3117-4a3c-b024-6abb93fc0ac9"
       ],
       "settings": {
-        "title": ""
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
-    "16454611055e903234": {
-      "type": "featured-product",
+    "16521873049d520bb8": {
+      "type": "image-with-text",
       "blocks": {
-        "164546110471569422-1": {
-          "type": "description",
+        "165218730445f16dee-0": {
+          "type": "heading",
           "settings": {
-            "is_tab": false
+            "heading": "Une application facile et rapide en 3 étapes :",
+            "heading_size": "h1"
           }
         },
-        "164546110471569422-2": {
-          "type": "variant_picker",
+        "165218730445f16dee-1": {
+          "type": "text",
           "settings": {
-            "size_chart": "",
-            "variant_labels": true,
-            "picker_type": "button",
-            "color_swatches": false
+            "text": "<p><strong>Étape 1 :<\/strong> Faites-vous un shampoing et séchez-vous les cheveux. <\/p><p> <br\/><strong>Étape 2 :<\/strong> Répartissez les fibres Keraneo délicatement sur les zones clairsemées. <\/p><p><br\/><strong>Étape 3 : <\/strong>Coiffez-vous naturellement sans vous souciez des zones amincies.  Pour un résultat encore plus naturel utiliser l’applicateur haute précision.  <br\/><\/p>",
+            "text_style": "body"
           }
         },
-        "c1bf318c-a999-4340-b1e1-048ef858c2d6": {
-          "type": "tab",
+        "165218730445f16dee-2": {
+          "type": "button",
           "settings": {
-            "title": "Innehåll",
-            "content": "",
-            "page": "ett-recyclers-set-innehaller"
-          }
-        },
-        "0735ba57-278a-48b2-89ab-f2630c925df4": {
-          "type": "tab",
-          "settings": {
-            "title": "Produktfakta",
-            "content": "<p>djup: 18,2 cm med lock, utan RBM 17,3 cm, PEM 17,7 cm<br\/>bredd: 27,5 cm med handtag<br\/>höjd: 36 cm med lock<br\/>vikt: PEM 1,3 kg RBM 0,9 kg<br\/>volym: PEM 9,5 liter RBM 11 liter<\/p>",
-            "page": ""
-          }
-        },
-        "164546110471569422-0": {
-          "type": "price",
-          "settings": {}
-        },
-        "164546110471569422-3": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "surface_pickup_enable": true
-          }
-        },
-        "5a5376ff-5fdc-4885-8c6e-a4342ad004f0": {
-          "type": "tab",
-          "settings": {
-            "title": "Passar de in i mina köksskåp?",
-            "content": "",
-            "page": "space-requirements-for-kitchen-cabinets"
+            "button_label": "Commander",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "164546110471569422-1",
-        "164546110471569422-2",
-        "c1bf318c-a999-4340-b1e1-048ef858c2d6",
-        "0735ba57-278a-48b2-89ab-f2630c925df4",
-        "164546110471569422-0",
-        "164546110471569422-3",
-        "5a5376ff-5fdc-4885-8c6e-a4342ad004f0"
+        "165218730445f16dee-0",
+        "165218730445f16dee-1",
+        "165218730445f16dee-2"
       ],
       "settings": {
-        "featured_product": "green-lizzie-recyklers-set",
-        "divider": true,
-        "sku_enable": false,
-        "image_position": "left",
-        "image_size": "medium",
-        "product_zoom_enable": true,
-        "thumbnail_position": "beside",
-        "thumbnail_arrows": false,
-        "mobile_layout": "partial",
-        "enable_video_looping": true,
-        "product_video_style": "muted"
+        "image": "shopify:\/\/shop_images\/ETAPE2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/keraneo_poudre_cheveux_-3.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?time_continue=3&v=QrsnV2bui18&ab_channel=Hairvisual",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "16454609508bd6fe7a",
-    "16454610527f2759bc",
-    "16454611055e903234"
+    "image_with_text_slide",
+    "video_with_text",
+    "full-image-column",
+    "compare_image_with_text",
+    "multicolumn_slide",
+    "testimonials",
+    "discover",
+    "image_banner",
+    "165218638476eb6e19",
+    "featured_collection",
+    "165218661313c63b0c",
+    "16521873049d520bb8",
+    "video",
+    "multicolumn"
   ]
 }

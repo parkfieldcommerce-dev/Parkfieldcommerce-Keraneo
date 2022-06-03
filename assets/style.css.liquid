@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/*! Begin common style css */
+.full-page-width { width: 100%; }
+.mobile-hide { display: block; }
+.desktop-hide { display: none; }
+.ipad-show { display: none; }
+.desktop-show { display: block; }
+.col-half { width: 50%; }
+
+@media (max-width: 1023px) { 
+  .ipad-show { display: block; }
+  .desktop-show { display: none; }
+}
+@media (max-width: 768px) { 
+  .mobile-hide { display: none; } 
+  .desktop-hide { display: block; } 
+}
+@font-face {
+  font-family: "Segoe UI Historic";
+  src: url({{ 'seguiemj.woff' | asset_url }}) format("woff");
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url({{ 'sofiapro-light.otf' | asset_url }}) format('opentype');
+}
+
+.page-main-content { width: 1100px; padding: 50px; }
+@media (max-width: 1200px) { 
+  .page-main-content { width: 100%; padding: 50px; }
+}
+@media (max-width: 749px) { 
+  .page-main-content { padding: 27px 15px; }
+}
+.shopify-page-section { margin-bottom: 103px; }
+
+a.btn { 
+  font-family: "Archivo Narrow";
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 23px 68px;
+  text-decoration: none;
+}
+@media (max-width: 768px) { 
+  a.btn { font-size: 18px !important; padding: 15px !important; }
+}
+@media (max-width: 425px) { 
+  a.btn { display: flex; justify-content: center; }
+}
+/*! End common style css */
+
+/*! Begin header style css */
+#shopify-section-header sticky-header.header-wrapper header { display: flex; justify-content: space-between; }
+#shopify-section-header sticky-header.header-wrapper header ul.list-menu li a.header__menu-item { 
+  font-family: 'Segoe UI Historic'; 
+  font-weight: 100; 
+  letter-spacing: 2px; 
+  font-size: 17px; 
+  line-height: 24px; 
+  text-transform: uppercase;
+}
+#shopify-section-header sticky-header.header-wrapper header ul.list-menu li a.header__menu-item span.header__active-menu-item { border-bottom: solid 1px; }
+@media (max-width: 768px) {
+  #shopify-section-header sticky-header.header-wrapper header .header__heading { width: 125px; }
+}
+/*! End header style css */

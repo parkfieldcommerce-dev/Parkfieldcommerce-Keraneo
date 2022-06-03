@@ -1,0 +1,31 @@
+<div class="full-image-column full-page-width shopify-page-section">
+    <div class="page-content">
+        {% if section.settings.left_image != blank and section.settings.right_image != blank %}
+            <img class="left-image" src="{{ section.settings.left_image | image_url: width: 1000 }}">
+            <img class="right-image" src="{{ section.settings.right_image | image_url: width: 1000 }}">
+        {% elsif section.settings.left_image != blank %}
+            <img class="one-image" src="{{ section.settings.left_image | image_url: width: 2000 }}">
+        {% elsif section.settings.right_image != blank %}
+            <img class="one-image" src="{{ section.settings.right_image | image_url: width: 2000 }}">
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Full Image Column",
+  "class": "full_image_column",
+  "settings": [
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

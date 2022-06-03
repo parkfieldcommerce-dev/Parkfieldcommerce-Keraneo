@@ -1,0 +1,80 @@
+<div class="multicolumn-slide full-width shopify-page-section">
+    <hr class="hr__section-top">
+    <div class="text-box page-width">
+        {% if section.settings.heading != blank %}
+            <h2 class="heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+            <div class="text">
+                <p>{{ section.settings.text }}</p>
+            </div>
+        {% endif %}
+    </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide">
+                    <a href="javascript:;" class="zoomWrapper">
+                        {% if block.settings.image != blank %}
+                            <img src="{{ block.settings.image | image_url: width: 320 }}">
+                        {% endif %}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="section-button page-width">
+        {% if section.settings.link != blank %}
+            <a href="{{ section.settings.link }}" class="btn">{{ section.settings.button_label }}</a>
+        {% endif %}
+    </div>
+    <hr class="hr__section-bottom">
+</div>
+
+{% schema %}
+{
+  "name": "Multicolumn Slide",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+    },
+    {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+    },
+    {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+    },
+    {
+        "type": "url",
+        "id": "link",
+        "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "column",
+        "name": "t:sections.multicolumn.blocks.column.name",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Slide Image"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn Slide"
+    }
+  ]
+}
+{% endschema %}

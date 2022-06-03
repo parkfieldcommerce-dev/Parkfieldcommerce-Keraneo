@@ -1,0 +1,83 @@
+<div class="image_with_text_slide shopify-page-section page-width">
+    <div class="swiper mySwiper page-container">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide">
+                    <div class="slide-image">
+                        {% if block.settings.image != blank %}
+                            <img src="{{ block.settings.image | image_url: width: 700 }}">
+                        {% endif %}
+                    </div>
+                    <div class="slide-right-text">
+                        <div class="slide_subtitle">
+                            {% if block.settings.subtitle != blank %}
+                                <span>{{ block.settings.subtitle }}</span>
+                            {% endif %}
+                        </div>
+                        {% if block.settings.heading != blank %}
+                            <h2 class="slide-heading">{{ block.settings.heading }}</h2>
+                        {% endif %}
+                        <div class="slide_label">
+                            {% if block.settings.label != blank %}
+                                <span>{{ block.settings.label }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="slide_button">
+                            {% if block.settings.button_label != blank %}
+                                <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_label }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-next">{% render 'arrow-right-svg' %}</div>
+    <div class="swiper-button-prev">{% render 'arrow-left-svg' %}</div>
+</div>
+
+{% schema %}
+{
+  "name": "Image With Text Slide",
+  "class": "image_with_text_slide",
+  "blocks": [
+    {
+        "type": "image_with_text_slide",
+        "name": "Image With Text Slide",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "label",
+                "label": "label"
+            },
+            {
+                "type": "text",
+                "id": "button_label",
+                "label": "Button Label"
+            },
+            {
+                "type": "url",
+                "id": "button_link",
+                "label": "Button Link"
+            }
+        ]
+    }
+  ]
+}
+{% endschema %}

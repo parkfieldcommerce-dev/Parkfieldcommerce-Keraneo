@@ -3,9 +3,33 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -13,129 +37,182 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "settings": {}
+          "settings": {
+            "show_dynamic_checkout": true
+          }
         },
         "description": {
           "type": "description",
           "settings": {}
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {}
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
         },
-        "inventory_status": {
-          "type": "inventory_status",
-          "settings": {}
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
         },
         "share": {
           "type": "share",
-          "settings": {}
-        },
-        "sales_point": {
-          "type": "sales_point",
-          "settings": {}
-        },
-        "tab": {
-          "type": "tab",
-          "settings": {}
-        },
-        "text": {
-          "type": "text",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "contact": {
-          "type": "contact",
-          "settings": {}
+          "settings": {
+            "share_label": "Share"
+          }
         }
       },
       "block_order": [
+        "vendor",
+        "title",
+        "caption",
         "price",
-        "separator",
         "variant_picker",
-        "sales_point",
-        "inventory_status",
+        "quantity_selector",
         "buy_buttons",
         "description",
-        "tab",
-        "contact",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3",
         "share"
       ],
-      "settings": {}
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
     },
-    "sub": {
-      "type": "product-full-width",
-      "disabled": true,
-      "settings": {}
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Hassle-Free Exchanges",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "settings": {}
-    },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "settings": {}
-    },
-    "collection-return": {
-      "type": "collection-return",
-      "settings": {}
-    },
-    "background-image-text": {
-      "type": "background-image-text",
       "settings": {
-        "title": "About your brand",
-        "parallax": false
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
       }
-    },
-    "text-and-image": {
-      "type": "text-and-image",
-      "settings": {
-        "title": "About your brand"
-      }
-    },
-    "text-and-image2": {
-      "type": "text-and-image",
-      "settings": {
-        "title": "About your brand",
-        "layout": "left"
-      }
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonials-0": {
-          "type": "testimonial",
-          "settings": {}
-        },
-        "testimonials-1": {
-          "type": "testimonial",
-          "settings": {}
-        },
-        "testimonials-2": {
-          "type": "testimonial",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "testimonials-0",
-        "testimonials-1",
-        "testimonials-2"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "main",
-    "sub",
-    "background-image-text",
-    "text-and-image",
-    "text-and-image2",
-    "testimonials",
-    "product-recommendations",
-    "recently-viewed",
-    "collection-return"
+    "image-with-text",
+    "multicolumn",
+    "product-recommendations"
   ]
 }
