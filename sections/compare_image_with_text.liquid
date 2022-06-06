@@ -15,9 +15,16 @@
         </figure>
     </div>
     <div class="text-group">
-        <h2 class="image-with-text__heading"> {{ section.settings.heading | escape }} </h2>
-        <p class="image-with-text__text image-with-text__text--caption" {{ section.shopify_attributes }}>{{ section.settings.caption | escape }}</p>
-        <div class="image-with-text__text rte " {{ section.shopify_attributes }}><p>{{ section.settings.text }}</p></div>
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'heading' -%}
+                    <h2 class="image-with-text__heading"> {{ block.settings.heading | escape }} </h2>
+                {%- when 'caption' -%}
+                    <p class="image-with-text__text image-with-text__text--caption" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
+                {%- when 'text' -%}
+                    <div class="image-with-text__text rte " {{ block.shopify_attributes }}><p>{{ block.settings.text }}</p></div>
+            {% endcase %}
+        {% endfor %}
         <div class="compare-button">
             {%- if section.settings.button_label != blank -%}
                 <a href="{{ section.settings.button_link }}" {{ section.shopify_attributes }} class="btn">
@@ -50,21 +57,6 @@
     "class": "section",
     "settings": [
         {
-            "type": "text",
-            "id": "heading",
-            "label": "Heading"
-        },
-        {
-            "type": "text",
-            "id": "caption",
-            "label": "Caption"
-        },
-        {
-            "type": "textarea",
-            "id": "text",
-            "label": "text"
-        },
-        {
             "type": "url",
             "id": "button_link",
             "label": "Button Label"
@@ -83,6 +75,44 @@
             "type": "image_picker",
             "id": "after_image",
             "label": "After Image"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "heading",
+            "type": "heading",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                }
+            ]
+        },
+        {
+            "name": "caption",
+            "type": "caption",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "caption",
+                    "label": "Caption"
+                }
+            ]
+        },
+        {
+            "name": "text",
+            "type": "text",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "html",
+                    "id": "text",
+                    "label": "Description HTML"
+                }
+            ]
         }
     ],
     "presets": [

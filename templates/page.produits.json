@@ -1,0 +1,31 @@
+{
+    "sections": {
+        "collection_slide": {
+            "type": "collection-slide",
+            "settings": {}
+        },
+        "timeline": {
+            "type": "timeline",
+            "settings": {}
+        },
+        "image_banner1": {
+            "type": "image-banner",
+            "settings": {}
+        },
+        "testimonials": {
+          "type": "testimonials",
+          "settings": {}
+        },
+        "discover": {
+            "type": "discover",
+            "settings": {}
+        }
+    },
+    "order": [
+        "collection_slide",
+        "timeline",
+        "image_banner1",
+        "testimonials",
+        "discover"
+    ]
+}

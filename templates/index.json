@@ -4,6 +4,10 @@
       "type": "image_with_text_slide",
       "settings": {}
     },
+    "social_icon_list": {
+      "type": "social-icon-list",
+      "settings": {}
+    },
     "video_with_text": {
       "type": "video_with_text",
       "settings": {}
@@ -335,6 +339,7 @@
   },
   "order": [
     "image_with_text_slide",
+    "social_icon_list",
     "video_with_text",
     "full-image-column",
     "compare_image_with_text",

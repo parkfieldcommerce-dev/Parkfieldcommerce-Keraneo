@@ -1,0 +1,44 @@
+<div class="social_icon_list">
+    <ul class="icon-list">
+        {% for block in section.blocks%}
+            <li>
+                <a href="{% if block.settings.url != blank%}{{ block.settings.url }}{% else %}Javascript:;{% endif %}">
+                    {% if block.settings.icon != blank%}
+                        <img src="{{ block.settings.icon | image_url : width: 100  }}">
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Social Icon List",
+  "tag": "section",
+  "class": "section",
+  "blocks": [
+    {
+        "type": "column",
+        "name": "Column",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "Social Icon"
+            },
+            {
+                "type": "text",
+                "id": "url",
+                "label": "Link"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Icon List"
+    }
+  ]
+}
+{% endschema %}

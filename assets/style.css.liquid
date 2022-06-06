@@ -7,6 +7,7 @@
 .ipad-show { display: none; }
 .desktop-show { display: block; }
 .col-half { width: 50%; }
+.banner__media { background: transparent; }
 
 @media (max-width: 1023px) { 
   .ipad-show { display: block; }
@@ -43,6 +44,9 @@ a.btn {
   padding: 23px 68px;
   text-decoration: none;
 }
+.image-banner a.button:hover:after { 
+  box-shadow: none;
+}
 @media (max-width: 768px) { 
   a.btn { font-size: 18px !important; padding: 15px !important; }
 }
@@ -50,6 +54,21 @@ a.btn {
   a.btn { display: flex; justify-content: center; }
 }
 /*! End common style css */
+
+h2.section-heading {
+  font-family: "Archivo Narrow";
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 61px;
+  margin: 61px 0px;
+  text-align: center;
+}
+@media (max-width: 768px) 
+{
+  h2.section-heading { font-size: 35px; }
+}
+
 
 /*! Begin header style css */
 #shopify-section-header sticky-header.header-wrapper header { display: flex; justify-content: space-between; }
@@ -66,3 +85,17 @@ a.btn {
   #shopify-section-header sticky-header.header-wrapper header .header__heading { width: 125px; }
 }
 /*! End header style css */
+
+/* Begin Footer Custom Style CSS */
+.footer__content-bottom { display: none; }
+footer.footer ul.footer-block__details-content li a{ 
+    font-family: "Archivo Narrow";
+    font-size: 18px;
+    font-weight: "Regular"; 
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+/* End Footer Custom Style CSS */

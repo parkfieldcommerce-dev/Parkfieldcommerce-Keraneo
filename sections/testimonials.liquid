@@ -1,10 +1,12 @@
 <div class="testimonials page-width shopify-page-section">
-    <h2 class="heading">{{ section.settings.heading }}</h2>
+    <h2 class="section-heading">{{ section.settings.heading }}</h2>
     <div class="block-list" id="app">
         {% for block in section.blocks %}
             <div class="item">
                 {% if block.settings.image != blank %}
                     <img src="{{ block.settings.image | image_url: width: 500 }}">
+                {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
                 {% endif %}
                 <div class="personal-review">
                     <h3 class="name">{{ block.settings.name }}</h3>
@@ -37,6 +39,7 @@
         "label": "Heading"
     }
   ],
+  "max_blocks": 3,
   "blocks": [
     {
         "type": "column",

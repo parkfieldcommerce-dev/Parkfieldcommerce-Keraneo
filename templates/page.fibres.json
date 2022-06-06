@@ -1,0 +1,46 @@
+{
+    "sections": {
+        "image_banner": {
+            "type": "image-banner",
+            "settings": {}
+        },
+        "social_icon_list": {
+            "type": "social-icon-list",
+            "settings": {}
+        },
+        "ingredients": {
+            "type": "ingredients",
+            "settings": {}
+        },
+        "collection_slide": {
+            "type": "collection-slide",
+            "settings": {}
+        },
+        "compare_image_with_text": {
+            "type": "compare_image_with_text",
+            "settings": {}
+        },
+        "item_list": {
+            "type": "item-list",
+            "settings": {}
+        },
+        "image_banner1": {
+            "type": "image-banner",
+            "settings": {}
+        },
+        "discover": {
+            "type": "discover",
+            "settings": {}
+        }
+    },
+    "order": [
+        "image_banner",
+        "social_icon_list",
+        "ingredients",
+        "collection_slide",
+        "compare_image_with_text",
+        "item_list",
+        "image_banner1",
+        "discover"
+    ]
+}

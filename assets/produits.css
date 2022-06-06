@@ -1,0 +1,5 @@
+#Banner-template--16078972813566__image_banner1 { height: 100rem; }
+@media (max-width: 1023px) {
+    #Banner-template--16078972813566__image_banner1 { height: auto; }
+}
+.social_icon_list { margin-top: -370px; }

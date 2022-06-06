@@ -6,6 +6,8 @@
                     <div class="slide-image">
                         {% if block.settings.image != blank %}
                             <img src="{{ block.settings.image | image_url: width: 700 }}">
+                        {% else %}
+                        <img src="{{ 'empty.png' | asset_url }}">
                         {% endif %}
                     </div>
                     <div class="slide-right-text">
@@ -78,6 +80,11 @@
             }
         ]
     }
+  ],
+  "presets": [
+      {
+      "name": "Image With Text Slide"
+      }
   ]
 }
 {% endschema %}

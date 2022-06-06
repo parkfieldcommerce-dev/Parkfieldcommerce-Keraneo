@@ -1,0 +1,6 @@
+#shopify-section-template--16076764840190__image_banner .banner__content  .banner__box  .banner__text,
+#shopify-section-template--16076764840190__image_banner .banner__content  .banner__box  h2.banner__heading  { color: #191816; }
+#Banner-template--16076764840190__image_banner1 { height: 100rem; }
+@media (max-width: 1023px) {
+    #Banner-template--16076764840190__image_banner1 { height: auto; }
+}

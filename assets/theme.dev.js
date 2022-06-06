@@ -1,4 +1,4 @@
-if ($('.image_with_text_slide .mySwiper')) {
+if ($('.image_with_text_slide .mySwiper').length > 0) {
   var swiper = new Swiper(".image_with_text_slide .mySwiper", {
       pagination: {
           el: ".image_with_text_slide .swiper-pagination",
@@ -11,7 +11,7 @@ if ($('.image_with_text_slide .mySwiper')) {
   });
 }
 
-if ($('.multicolumn-slide .mySwiper')) {
+if ($('.multicolumn-slide .mySwiper').length > 0) {
     var swiper = new Swiper(".multicolumn-slide .mySwiper", {
         slidesPerView: 10,
         spaceBetween: 30,
@@ -50,7 +50,7 @@ if ($('.multicolumn-slide .mySwiper')) {
 }
 
 // Begin compare before/after image custom style css
-if ($('.compare_image_with_text')) {
+if ($('.compare_image_with_text').length > 0 || $('.compare-column').length > 0 ) {
   jQuery(document).ready(function($) {
     var dragging = false,
         scrolling = false,
@@ -181,7 +181,7 @@ if ($('.compare_image_with_text')) {
 // End compare before/after image custom style css
 
 
-if ($('.testimonials')) {
+if ($('.testimonials').length > 0) {
     Vue.component('star-rating', {
     template: '#star-rating',
     props: ['max', 'current'],
@@ -199,5 +199,39 @@ if ($('.testimonials')) {
             this.value = (Math.random()*4+1).toFixed(2);
         }
     }
+    });
+}
+if ($('.collection-slide .mySwiper').length > 0) {
+    var swiper = new Swiper(".collection-slide .mySwiper", {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".collection-slide .swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            375: {
+                slidesPerView: 1,
+            },
+            425: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1440: {
+              slidesPerView: 2.5,
+            }
+        }
     });
 }
