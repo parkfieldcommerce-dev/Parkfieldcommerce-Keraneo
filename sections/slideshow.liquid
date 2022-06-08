@@ -140,10 +140,7 @@
             <h2 class="banner__heading">{{ block.settings.slide_title1 | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.slide_title2 != blank -%}
-            <h2 class="banner__heading">{{ block.settings.slide_title2 | escape }}</h2>
-            {%- endif -%}
-            {%- if block.settings.slide_title3 != blank -%}
-            <h1 class="banner__heading">{{ block.settings.slide_title3 | escape }}</h2>
+            <h1 class="banner__heading">{{ block.settings.slide_title2 | escape }}</h1>
             {%- endif -%}
           </div>
         </div>
@@ -332,12 +329,6 @@
         {
           "type": "text",
           "id": "slide_title2",
-          "default": "Slide Title",
-          "label": "Slide Title"
-        },
-        {
-          "type": "text",
-          "id": "slide_title3",
           "default": "Slide Title",
           "label": "Slide Title"
         },

@@ -201,6 +201,7 @@ if ($('.testimonials').length > 0) {
     }
     });
 }
+
 if ($('.collection-slide .mySwiper').length > 0) {
     var swiper = new Swiper(".collection-slide .mySwiper", {
         slidesPerView: 2.5,
@@ -233,5 +234,22 @@ if ($('.collection-slide .mySwiper').length > 0) {
               slidesPerView: 2.5,
             }
         }
+    });
+}
+
+if ($('.testimonials .mySwiper').length > 0) {
+    var swiper = new Swiper(".testimonials .mySwiper", {
+        pagination: {
+            el: ".testimonials .swiper-pagination",
+            type: "progressbar",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".testimonials .swiper-button-next",
+            prevEl: ".testimonials .swiper-button-prev",
+        },
     });
 }

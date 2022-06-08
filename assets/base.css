@@ -1748,8 +1748,9 @@ details[open] > .share-button__fallback {
 
 .field {
   position: relative;
-  width: 100%;
+  width: 80%;
   display: flex;
+  margin: 0 auto;
   transition: box-shadow var(--duration-short) ease;
 }
 

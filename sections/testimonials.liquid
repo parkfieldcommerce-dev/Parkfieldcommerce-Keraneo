@@ -1,22 +1,49 @@
 <div class="testimonials page-width shopify-page-section">
-    <h2 class="section-heading">{{ section.settings.heading }}</h2>
-    <div class="block-list" id="app">
-        {% for block in section.blocks %}
-            <div class="item">
-                {% if block.settings.image != blank %}
-                    <img src="{{ block.settings.image | image_url: width: 500 }}">
-                {% else %}
-                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                {% endif %}
-                <div class="personal-review">
-                    <h3 class="name">{{ block.settings.name }}</h3>
-                    <span class="review_number">{{ block.settings.review_number }}</span>
-                    <br>
-                    <star-rating :max="5" :current="{{ block.settings.review_range }}"></star-rating>
-                    <p class="description">{{ block.settings.description }}</p>
+    <div class="section-main-container"  id="app">
+        <h2 class="section-heading">{{ section.settings.heading }}</h2>
+        <div class="mobile-hide">
+            <div class="block-list">
+                {% for block in section.blocks %}
+                    <div class="item">
+                        {% if block.settings.image != blank %}
+                            <img src="{{ block.settings.image | image_url: width: 500 }}">
+                        {% else %}
+                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% endif %}
+                        <div class="personal-review">
+                            <h3 class="name">{{ block.settings.name }}</h3>
+                            <span class="review_number">{{ block.settings.review_number }}</span>
+                            <br>
+                            <star-rating :max="5" :current="{{ block.settings.review_range }}"></star-rating>
+                            <p class="description">{{ block.settings.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="desktop-hide">
+            <div class="swiper mySwiper page-container">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="item swiper-slide">
+                            {% if block.settings.image != blank %}
+                                <img src="{{ block.settings.image | image_url: width: 500 }}">
+                            {% else %}
+                                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {% endif %}
+                            <div class="personal-review">
+                                <h3 class="name">{{ block.settings.name }}</h3>
+                                <span class="review_number">{{ block.settings.review_number }}</span>
+                                <br>
+                                <star-rating :max="5" :current="{{ block.settings.review_range }}"></star-rating>
+                                <p class="description">{{ block.settings.description }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-        {% endfor %}
+        </div>
     </div>
 </div>
 
