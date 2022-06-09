@@ -1,0 +1,104 @@
+/* Begin Product Custom Style CSS */
+.product .product__media-wrapper modal-opener.product__modal-opener { width: 70%; margin: 0 auto; }
+.product .product__info-wrapper { padding: 0px !important; }
+.product .product__info-wrapper .caption-with-letter-spacing { 
+    font-family: "Archivo Narrow";
+    font-size: 21px;
+}
+.product .product__info-wrapper .product__title h1 { 
+    font-family: "Archivo Narrow";
+    font-size: 31px;
+    font-weight: 100;
+    letter-spacing: 6px;
+}
+.product .product__info-wrapper .price__regular { 
+    font-family: "Archivo Narrow";
+    font-size: 21px;
+    font-weight: 100;
+}
+.product .product__info-wrapper .product__info-container>*+* { margin: 0px; }
+.product .product__info-wrapper .product__tax { display: none; }
+.product .product__info-wrapper .product__description {
+    font-family: "Sofia Pro";
+    font-size: 19px;
+    color: #191816;
+    margin-top: 22px;
+}
+.product .product-form__input--dropdown {  margin-top: 39px; }
+.product .product-form__input .form__label { 
+    font-family: "Archivo Narrow";
+    font-size: 19px;
+    color: #191816;
+    margin-top: 22px;
+    text-transform: uppercase;
+}
+.product-form__input .select {
+    max-width: 31rem !important;
+    height: 53px;
+}
+.product .quantity { height: 53px;  width: 182px; }
+.product select
+{
+    font-family: "Archivo Narrow";
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+.product select:focus-visible { box-shadow: none; }
+.product button.quantity__button[name=minus] {     
+    border-right: solid 1px #919191;
+}
+.product button.quantity__button[name=plus] {     
+    border-left: solid 1px #919191;
+}
+.product .product-form__submit { 
+    height: 53px;  
+    font-family: "Archivo Narrow";
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 308px;
+}
+.product .shopify-payment-button__button {
+    font-family: "Archivo Narrow";
+    font-size: 20px;
+    text-transform: uppercase; 
+}
+.product .shopify-payment-button { margin-top: 23px; width: 308px; }
+@media (max-width: 767px) {
+    .product .product__media-wrapper modal-opener.product__modal-opener { width: 100%; }
+    .product-form__input .select {
+        max-width: 100% !important;
+        height: 53px;
+    }
+    .product .product-form__submit, .product .shopify-payment-button { width: 100%; }
+}
+/* End Product Custom Style CSS */
+
+/* Begin compare-with-text custom style css */
+#shopify-section-template--16061439967486__1654751564791544cf h2.section-heading {
+    width: 55%;
+    margin: 50px auto;
+}
+@media (min-width: 1023px) {
+    #shopify-section-template--16061439967486__1654751564791544cf .section-content {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px) {
+    #shopify-section-template--16061439967486__1654751564791544cf h2.section-heading {
+        width: 100%;
+        margin: 0px auto 35px;
+        margin-top: 30px;
+    }
+    #shopify-section-template--16061439967486__1654751564791544cf .compare_image_with_text .section-content .image-with-text__text { margin: 0px !important; }
+    #shopify-section-template--16061439967486__1654751564791544cf .cd-image-container { width: 100%; margin-top: 30px; }
+}
+#shopify-section-template--16061439967486__1654751564791544cf .cd-handle {
+    height: 30px;
+    width: 30px;
+    background-size: 18px;
+    margin-left: -18px;
+}
+#shopify-section-template--16061439967486__1654751564791544cf .is-visible .cd-resize-img {  border-right: solid 3px #fff; }
+/* End compare-with-text custom style css */

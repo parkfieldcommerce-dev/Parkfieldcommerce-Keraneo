@@ -286,7 +286,7 @@
     -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
     transition: transform 0.3s 0.7s, opacity 0s 0.7s;
 }
-.compare_image_with_text { display: flex; }
+.compare_image_with_text .section-content { display: flex; }
 .compare_image_with_text .text-group { width: 50%; }
 .compare_image_with_text .compare-image-group { width: 50%; }
 .compare_image_with_text h2.image-with-text__heading {  
@@ -316,9 +316,48 @@
     text-transform: uppercase;
     font-weight: 100;
 }
+/* ==========space line============ */
+    .compare_image_with_text .section-content .space-line {
+        position: relative;
+    }
+    .compare_image_with_text .section-content .space-line::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        width: 1px;
+        background: #191816;
+        height: 85%;
+    }
+    .compare_image_with_text .section-content .space-line::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 18px;
+        transform: translate(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid #707070;
+        z-index: 1;
+    }
+    .compare_image_with_text .image_left.space-line .image-with-text__text { margin-left: 35px; }
+    .compare_image_with_text .section-content .image_right.space-line::after {
+        right: 0;
+    }
+    .compare_image_with_text .section-content .image_right.space-line:before {
+        right: -30px;
+    }   
+    @media (max-width: 1023px) {
+        .compare_image_with_text .section-content .space-line::after,
+        .compare_image_with_text .section-content .space-line::before
+        { display: none; }
+    }
+/* ===========space line ========== */
 @media (max-width: 1023px) 
 {
-    .compare_image_with_text { display: block; }
+    .compare_image_with_text .section-content { display: block; }
     .compare_image_with_text .text-group { width: 100%; }
     .compare_image_with_text .compare-image-group { width: 100%; }
 }
@@ -957,7 +996,7 @@
     .timeline-section .direction-r .flag:before {
         position: absolute;
         top: 50%;
-        right: -43px;
+        right: -477px;
         content: ' ';
         display: block;
         width: 30px;
@@ -1163,4 +1202,134 @@
 }
 /* End timeline Custom Style CSS */
 
+/* Begin custom-image-with-text custom style css */
+.custom_image_with_text .section-content { display: flex; }
+.custom_image_with_text .text-group { width: 50%; position: relative;}
+.custom_image_with_text .compare-image-group { width: 50%; }
+.custom_image_with_text h2.image-with-text__heading {  
+    font-family: "Archivo Narrow";
+    font-size: 38px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 27px 0px;
+}
+.custom_image_with_text .image-with-text__text p {  
+    font-family: "Sofia Pro";
+    font-size: 26px;
+    font-weight: 100; 
+    line-height: 31px;
+}
+.custom_image_with_text .image-with-text__text+.compare-button a.btn { 
+    color: #fff;
+    background-color: #191816;
+}
+.custom_image_with_text .image-with-text__text+.compare-button { 
+    margin-top: 68px;
+}
+.custom_image_with_text p.image-with-text__text--caption {
+    margin: 0;
+    font-family: 'Archivo Narrow';
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+/* ==========space line============ */
+.custom_image_with_text .section-content .space-line {
+    position: relative;
+}
+.custom_image_with_text .section-content .space-line::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    width: 1px;
+    background: #191816;
+    height: 100%;
+}
+.custom_image_with_text .section-content .space-line::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0px;
+    transform: translate(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #707070;
+    z-index: 1;
+}
+.custom_image_with_text .image_left.space-line .image-with-text__text { margin-left: 35px; }
+.custom_image_with_text .image_right.space-line .image-with-text__text { margin-right: 35px; max-width: 350px; }
+.custom_image_with_text .space-line.image_right { display: flex; justify-content: right; }
+.custom_image_with_text .section-content .image_right.space-line::after {
+    right: 0;
+}
+.custom_image_with_text .section-content .image_right.space-line:before {
+    right: -30px;
+}   
+@media (max-width: 1023px) {
+    .custom_image_with_text .section-content .space-line::after,
+    .custom_image_with_text .section-content .space-line::before
+    { display: none; }
+}
+@media (max-width: 1023px) 
+{
+    .custom_image_with_text .section-content { display: block; }
+    .custom_image_with_text .text-group { width: 100%; }
+    .custom_image_with_text .compare-image-group { width: 100%; }
+}
+@media (max-width: 425px) 
+{
+    .custom_image_with_text h2.image-with-text__heading { font-size: 30px; }
+    .custom_image_with_text .image-with-text__text p { font-size: 18px; }
+    .custom_image_with_text p.image-with-text__text--caption { font-size: 20px; }
+    .custom_image_with_text .image-with-text__text+.btn { display: flex; margin-top: 30px; }
+}
+/* ===========space line ========== */
+/* End custom-image-with-text custom style css */
 
+/* Begin video-with-step Custom Style CSS */
+.video-with-step .section-content { display: flex; }
+.video-with-step .video-content {
+    width: 525px;
+}
+.video-with-step .step-content {
+    margin: 0px auto;
+    width: 50%;
+    border-left: solid 1px #191816;
+    padding: 0px 20px 0px 20px;
+    margin-left: 75px;
+} 
+.video-with-step .step-content .step {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    line-height: 1.7;
+    position: relative;
+    margin-top: 80px;
+    margin-left: 31px;
+}
+.video-with-step .step-content .step h2.title { margin: 0px; }
+.video-with-step .step-content .step:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 10px;
+    left: -67px;
+}
+/* .video-with-step .step-content p::after {
+    content: '';
+    position: absolute;
+    border: solid 8px;
+    border-color: transparent #ccc transparent transparent;
+    top: 10px;
+    left: -17px;
+} */
+/* End video-with-step Custom Style CSS */

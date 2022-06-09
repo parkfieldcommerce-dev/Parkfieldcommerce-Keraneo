@@ -1,21 +1,13 @@
-<div class="compare_image_with_text page-width shopify-page-section">
+<div class="page-width shopify-page-section">
     {% if section.settings.heading != blank %}
         <h2 class="section-heading">{{ section.settings.heading }}</h2>
     {% endif %}
     <div class="section-content">
-        <div class="compare-image-group {% if section.settings.image_position == 'image_right'%}ipad-show{% else %}desktop-show{% endif %}">
+        <div class="image-group {% if section.settings.image_position == 'image_right'%}ipad-show{% else %}desktop-show{% endif %}">
             <figure class="cd-image-container">
-                {% if section.settings.after_image != blank %}
-                    <img src="{{ section.settings.after_image | image_url: width: 700 }}" alt="Modified Image">
+                {% if section.settings.image != blank %}
+                    <img src="{{ section.settings.image | image_url: width: 700 }}">
                 {% endif %}
-                <span class="cd-image-label" data-type="modified"></span>
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
-                    {% if section.settings.before_image != blank %}
-                        <img src="{{ section.settings.before_image | image_url: width: 700 }}" alt="Original Image">
-                    {% endif %}
-                    <span class="cd-image-label" data-type="original"></span>
-                </div>
-                <span class="cd-handle"></span>
             </figure>
         </div>
         <div class="text-group {% if section.settings.space_line == 'yes'%}space-line{% endif %} {{ section.settings.image_position }}">
@@ -37,19 +29,11 @@
                 {%- endif -%}         
             </div>    
         </div>
-        <div class="compare-image-group {% if section.settings.image_position == 'image_right'%}desktop-show{% else %}ipad-show{% endif %}">
+        <div class="image-group {% if section.settings.image_position == 'image_right'%}desktop-show{% else %}ipad-show{% endif %}">
             <figure class="cd-image-container">
-                {% if section.settings.after_image != blank %}
-                    <img src="{{ section.settings.after_image | image_url: width: 700 }}" alt="Modified Image">
+                {% if section.settings.image != blank %}
+                    <img src="{{ section.settings.image | image_url: width: 700 }}">
                 {% endif %}
-                <span class="cd-image-label" data-type="modified"></span>
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
-                    {% if section.settings.before_image != blank %}
-                        <img src="{{ section.settings.before_image | image_url: width: 700 }}" alt="Original Image">
-                    {% endif %}
-                    <span class="cd-image-label" data-type="original"></span>
-                </div>
-                <span class="cd-handle"></span>
             </figure>
         </div>
     </div>
@@ -58,8 +42,8 @@
 
 {% schema %}
 {
-    "name": "Compare Image With Text",
-    "class": "section",
+    "name": "Custom Image With Text",
+    "class": "custom_image_with_text",
     "settings": [
         {
             "type": "text",
@@ -67,24 +51,9 @@
             "label": "Heading"
         },
         {
-            "type": "url",
-            "id": "button_link",
-            "label": "Button Label"
-        },
-        {
-            "type": "text",
-            "id": "button_label",
-            "label": "Button Label"
-        },
-        {
             "type": "image_picker",
-            "id": "before_image",
-            "label": "Before Image"
-        },
-        {
-            "type": "image_picker",
-            "id": "after_image",
-            "label": "After Image"
+            "id": "image",
+            "label": "Image"
         },
         {
           "type": "select",
@@ -150,16 +119,16 @@
             "limit": 1,
             "settings": [
                 {
-                    "type": "html",
+                    "type": "richtext",
                     "id": "text",
-                    "label": "Description HTML"
+                    "label": "Description"
                 }
             ]
         }
     ],
     "presets": [
         {
-        "name": "Compare Image With Text"
+        "name": "Custom Image With Text"
         }
     ]
 }

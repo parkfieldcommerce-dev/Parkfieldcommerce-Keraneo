@@ -1,5 +1,7 @@
 <div class="full-width shopify-page-section">
-    <hr class="hr__section-top">
+    {% if section.settings.top_bottom_line == 'yes' %}
+        <hr class="hr__section-top">
+    {% endif %}
     <div class="text-box page-width">
         {% if section.settings.heading != blank %}
             <h2 class="section-heading">{{ section.settings.heading }}</h2>
@@ -28,7 +30,9 @@
             <a href="{{ section.settings.link }}" class="btn">{{ section.settings.button_label }}</a>
         {% endif %}
     </div>
-    <hr class="hr__section-bottom">
+    {% if section.settings.top_bottom_line == 'yes' %}
+        <hr class="hr__section-top">
+    {% endif %}
 </div>
 
 {% schema %}
@@ -56,6 +60,22 @@
         "type": "url",
         "id": "link",
         "label": "Button Link"
+    },
+    {
+        "type": "select",
+        "id": "top_bottom_line",
+            "options": [
+                {
+                    "value": "yes",
+                    "label": "yes"
+                },
+                {
+                    "value": "no",
+                    "label": "no"
+                }
+            ],
+        "default": "yes",
+        "label": "Top/Bottom Line"
     }
   ],
   "blocks": [

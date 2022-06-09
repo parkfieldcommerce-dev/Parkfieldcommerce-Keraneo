@@ -213,6 +213,7 @@
     {%- if template contains 'results' %} {{ 'results.css' | asset_url | stylesheet_tag }} {% endif -%}
     {%- if template contains 'fibres' %} {{ 'fibres.css' | asset_url | stylesheet_tag }} {% endif -%}
     {%- if template contains 'products' %} {{ 'products.css' | asset_url | stylesheet_tag }} {% endif -%}
+    {%- if template contains 'product' %} {{ 'main.product.css' | asset_url | stylesheet_tag }} {% endif -%}
     <!-- Include custom style css, end -->
     
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
