@@ -8,8 +8,8 @@
             "type": "timeline",
             "settings": {}
         },
-        "image_banner1": {
-            "type": "image-banner",
+        "custom_image_banner": {
+            "type": "custom-image-banner",
             "settings": {}
         },
         "testimonials": {
@@ -24,7 +24,7 @@
     "order": [
         "collection_slide",
         "timeline",
-        "image_banner1",
+        "custom_image_banner",
         "testimonials",
         "discover"
     ]

@@ -24,8 +24,8 @@
             "type": "item-list",
             "settings": {}
         },
-        "image_banner1": {
-            "type": "image-banner",
+        "custom_image_banner": {
+            "type": "custom-image-banner",
             "settings": {}
         },
         "discover": {
@@ -40,7 +40,7 @@
         "collection_slide",
         "compare_image_with_text",
         "item_list",
-        "image_banner1",
+        "custom_image_banner",
         "discover"
     ]
 }

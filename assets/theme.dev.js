@@ -205,7 +205,7 @@ if ($('.testimonials').length > 0) {
 if ($('.collection-slide .mySwiper').length > 0) {
     var swiper = new Swiper(".collection-slide .mySwiper", {
         slidesPerView: 2.5,
-        spaceBetween: 30,
+        spaceBetween: 200,
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,

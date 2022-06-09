@@ -1,0 +1,17 @@
+.social_icon_list { margin-top: -370px; }
+
+@media (min-width: 1700px) {
+    #Banner-template--16078972813566__image_banner1 .banner__content h2.banner__heading { font-size: 106px; }
+}
+#shopify-section-template--16091117093118__timeline .timeline-section {
+    margin-bottom: 203px;
+}
+@media (max-width: 1023px) {
+    .social_icon_list {
+        margin-top: -515px;
+        left: 10px;
+    }
+    #shopify-section-template--16091117093118__timeline .timeline-section {
+        margin-bottom: auto;
+    }
+}
