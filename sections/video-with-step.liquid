@@ -183,10 +183,12 @@
             </div>
         </div>
         <div class="step-content">
-            <div class="step">
-                <h2 class="title">Step 1</h2>
-                <p>this is a paragraph comment this is a paragraph comment this is a paragraph comment this is a paragraph </p>
-            </div>
+            {% for block in section.blocks %}
+                <div class="step">
+                    <h2 class="title">{{ block.settings.title }}</h2>
+                    <p>{{ block.settings.description }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -223,6 +225,24 @@
       "label": "t:sections.video.settings.video_url.label",
       "placeholder": "t:sections.video.settings.video_url.placeholder",
       "info": "t:sections.video.settings.video_url.info"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "Step",
+        "name": "Step",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description"
+            }
+        ]
     }
   ],
   "presets": [

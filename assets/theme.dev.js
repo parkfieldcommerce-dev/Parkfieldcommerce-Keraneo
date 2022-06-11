@@ -253,3 +253,19 @@ if ($('.testimonials .mySwiper').length > 0) {
         },
     });
 }
+
+if($('.faq-section').length > 0) {
+    let summaryCollection = document.getElementsByClassName('faq-item');
+    let signsCollection = document.getElementsByClassName('faq-open-icon');
+
+    for(let i = 0; i < summaryCollection.length; i++) {
+        summaryCollection[i].onclick = function() {
+            if(signsCollection[i].innerHTML === '+') {
+                console.log(i, summaryCollection.length);
+                signsCollection[i].innerHTML = '—';
+            } else {
+                signsCollection[i].innerHTML = '+';
+            }
+        }
+    }
+}

@@ -296,7 +296,7 @@
     font-weight: bold;
     margin: 27px 0px;
 }
-.compare_image_with_text .image-with-text__text p {  
+.compare_image_with_text .image-with-text__text {  
     font-family: "Sofia Pro";
     font-size: 20px;
     font-weight: 100; 
@@ -364,7 +364,7 @@
 @media (max-width: 425px) 
 {
     .compare_image_with_text h2.image-with-text__heading { font-size: 30px; }
-    .compare_image_with_text .image-with-text__text p { font-size: 18px; }
+    .compare_image_with_text .image-with-text__text { font-size: 18px; }
     .compare_image_with_text p.image-with-text__text--caption { font-size: 20px; }
     .compare_image_with_text .image-with-text__text+.btn { display: flex; margin-top: 30px; }
 }
@@ -1278,6 +1278,7 @@
     .custom_image_with_text .section-content { display: block; }
     .custom_image_with_text .text-group { width: 100%; }
     .custom_image_with_text .compare-image-group { width: 100%; }
+    .custom_image_with_text .image_right.space-line .image-with-text__text { max-width: 1023px; margin-right: 0px;}
 }
 @media (max-width: 425px) 
 {
@@ -1290,6 +1291,7 @@
 /* End custom-image-with-text custom style css */
 
 /* Begin video-with-step Custom Style CSS */
+.video-with-step { margin-top: 153px; }
 .video-with-step .section-content { display: flex; }
 .video-with-step .video-content {
     width: 525px;
@@ -1297,7 +1299,7 @@
 .video-with-step .step-content {
     margin: 0px auto;
     width: 50%;
-    border-left: solid 1px #191816;
+    border-left: solid 2px #1918164a;
     padding: 0px 20px 0px 20px;
     margin-left: 75px;
 } 
@@ -1311,7 +1313,16 @@
     margin-top: 80px;
     margin-left: 31px;
 }
-.video-with-step .step-content .step h2.title { margin: 0px; }
+.video-with-step .step-content .step h2.title {  
+    font-family: "Archivo Narrow"; 
+    font-size: 42px; 
+    text-transform: uppercase; 
+    font-weight: 700; 
+    text-align: left;
+    margin-top: 67px;
+    margin-top: -13px;
+    margin-bottom: 16px;
+}
 .video-with-step .step-content .step:before {
     content: "";
     position: absolute;
@@ -1324,12 +1335,151 @@
     top: 10px;
     left: -67px;
 }
-/* .video-with-step .step-content p::after {
-    content: '';
-    position: absolute;
-    border: solid 8px;
-    border-color: transparent #ccc transparent transparent;
-    top: 10px;
-    left: -17px;
-} */
+.video-with-step .step-content p {
+    font-family: "Sofia Pro";
+    font-size: 23px;
+    font-weight: 100;
+    line-height: 31px; 
+}
+.video-with-step h2.section-heading {margin: 45px auto; }
+.video-with-step .deferred-media__poster-button { height: 11rem; width: 11rem; background: #ffffff5e; }
+.video-with-step .deferred-media__poster-button .icon { height: 6rem; width: 6rem; }
+@media (max-width: 1023px) {
+    .video-with-step .step-content .step:before { content: unset; }
+    .video-with-step .step-content { border-left: 0; width: 100%; padding: 0; margin: 0; }
+    .video-with-step .section-content { display: block; }
+    .video-with-step .video-content { width: 100%; }
+    .video-with-step .step-content .step { margin-left: 0; }
+    .video-with-step { margin-top: auto; }
+}
+@media (max-width: 768px) {
+    .video-with-step .step-content p { font-size: 18px; }
+    .video-with-step .step-content .step h2.title { font-size: 30px;}
+    .video-with-step .step-content .step { margin-top: 20px; }
+    .video-with-step .deferred-media__poster-button { height: 9rem; width: 9rem; background: #ffffff5e; }
+    .video-with-step .deferred-media__poster-button .icon { height: 5rem; width: 5rem; }
+}
 /* End video-with-step Custom Style CSS */
+
+/* Begin satisfaction section Custom Style CSS */
+section.satisfaction-section { background: #648381;}
+section.satisfaction-section .section-content { text-align: center;  padding-top: 45px; padding-bottom: 75px; }
+section.satisfaction-section h2.heading { 
+    font-family: "Archivo Narrow";
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+}
+section.satisfaction-section p.subheading { 
+    font-family: "Sofia Pro";
+    font-size: 25px;
+    line-height: 31px;
+    color: #fff;
+    margin: 10px 0px 0px;
+}
+section.satisfaction-section .content p { 
+    font-family: "Sofia Pro";
+    font-size: 21px;
+    line-height: 31px;
+    color: #fff;
+}
+section.satisfaction-section .block-list p {
+    font-family: "Archivo Narrow";
+    font-size: 21px;
+    line-height: 31px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+section.satisfaction-section .block-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 38px;
+}
+section.satisfaction-section .block-list .item { width: 150px;  margin-bottom: 30px;}
+section.satisfaction-section .block-list .item .icon { width: 104px; height: 104px; position: relative; margin: 0 auto; display: flex; }
+section.satisfaction-section .block-list .item .icon img { width: 100%; position: absolute; bottom: 0; }
+section.satisfaction-section .block-list .item p { margin-top: 25px; }
+@media (max-width: 768px)
+{
+    section.satisfaction-section .block-list { flex-direction: column; align-items: center; }
+}
+/* End satisfaction section Custom Style CSS */
+
+/* End faq section Custom Style CSS */
+section.faq-section h2.section-heading { text-align: left; margin-bottom: 0px; }
+section.faq-section .faq-heading {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+}
+section.faq-section .faq-card {
+    border-bottom: 1px solid #191816;
+    padding: 14px 0px;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+section.faq-section .faq-open-icon {
+    font-size: 25px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+section.faq-section details[open] .faq-open-icon {
+    top: 0px; right: 0px;
+}
+section.faq-section details > summary {
+    list-style: none;
+}
+section.faq-section details > summary p{
+    font-family: "Sofia Pro";
+    font-size: 23px;
+    text-transform: uppercase;
+    padding-right: 100px;
+}
+section.faq-section details > summary::-webkit-details-marker {
+display: none;
+}
+section.faq-section details[open] summary {
+    font-weight: 500;
+}
+section.faq-section details[open] .faq-card-spoiler {
+    display: inline-block;
+    font-family: "Sofia Pro";
+    font-size: 23px;
+    padding-right: 100px;
+}
+section.faq-section .faq-aftertext {
+text-align: center;
+color: #8b8b9a;
+}
+@media (max-width: 768px) {
+    section.faq-section details>summary p {
+        font-size: 16px;
+        padding-right: 20px;
+    }
+    section.faq-section details[open] .faq-card-spoiler {
+        font-size: 15px;
+        padding-right: 20px;
+    }
+    section.faq-section .faq-card { padding: 5px 0; }
+}
+/* End faq section Custom Style CSS */
+
+/* Begin Product Review Custom Style CSS */
+.product-review-section .product-review-button { text-align: right; }
+.product-review-section .product-review-button a.btn { color: #C1C1C1; border: solid 1px #C1C1C1; margin-top: 30px;}
+.product-review-section span.spr-badge-caption { font-family: "Sofia Pro"; font-size: 18px; }
+.product-review-section .spr-badge-starrating .spr-icon {  font-size: 20px; color: #C46D5E; margin-right: 2px; }
+.product-review-section .spr-badge-starrating { margin: 0 15px 0 0; }
+.product-review-section .client-photos img { margin-top: 35px;}
+.product-review-section .client-photos p { font-family: "Sofia Pro"; font-size: 21px; }
+@media (max-width: 768px) {
+    .product-review-section .product-review-button { text-align: center; }
+}
+/* End Product Review Custom Style CSS */

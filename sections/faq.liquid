@@ -1,0 +1,51 @@
+<div class="page-width shopify-page-section">
+    <h2 class="section-heading">{{ section.settings.heading }}</h2>
+    <div class="block-list">
+        {% for block in section.blocks %}
+            <div class="faq">
+                <details class="faq-card">
+                    <summary class="faq-item"><p>{{ block.settings.question }}</p><div class="faq-open-icon">+</div></summary>
+                    <p class="faq-card-spoiler">{{ block.settings.answer }} </p>
+                </details>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "FAQ",
+    "tag": "section",
+    "class": "faq-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "Item",
+            "name": "faq",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "question",
+                    "label": "Question"
+                },
+                {
+                    "type": "textarea",
+                    "id": "answer",
+                    "label": "Answer"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "FAQ"
+        }
+    ]
+}
+{% endschema %}

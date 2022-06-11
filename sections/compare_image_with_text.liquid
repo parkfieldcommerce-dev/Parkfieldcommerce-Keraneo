@@ -25,8 +25,8 @@
                         <h2 class="image-with-text__heading"> {{ block.settings.heading | escape }} </h2>
                     {%- when 'caption' -%}
                         <p class="image-with-text__text image-with-text__text--caption" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
-                    {%- when 'text' -%}
-                        <div class="image-with-text__text rte " {{ block.shopify_attributes }}><p>{{ block.settings.text }}</p></div>
+                    {%- when 'richtext' -%}
+                        <div class="image-with-text__text rte " {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
                 {% endcase %}
             {% endfor %}
             <div class="compare-button">
@@ -69,7 +69,7 @@
         {
             "type": "url",
             "id": "button_link",
-            "label": "Button Label"
+            "label": "Button Link"
         },
         {
             "type": "text",
@@ -146,13 +146,13 @@
         },
         {
             "name": "text",
-            "type": "text",
+            "type": "richtext",
             "limit": 1,
             "settings": [
                 {
-                    "type": "html",
+                    "type": "richtext",
                     "id": "text",
-                    "label": "Description HTML"
+                    "label": "Description"
                 }
             ]
         }
