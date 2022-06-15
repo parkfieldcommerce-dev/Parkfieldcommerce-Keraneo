@@ -211,6 +211,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 .slideshow__slide .slide_logo_title span { font-size: 19px; color: #fff; }
 .slideshow__slide h2.banner__heading { font-size: 50px; font-weight: bold; color: #fff;}
 .slideshow__slide h1.banner__heading { font-size: 80px; font-weight: bold; margin-top: -29px; color: #fff;}
+.slideshow__slide .banner__buttons a.btn { background: #191816; color: #fff;}
 slideshow-component.slider-mobile-gutter .slideshow__controls button.slider-button { display: none; }
 slideshow-component.slider-mobile-gutter .slideshow__controls { bottom: 102px; border: none; display: flex; justify-content: end; margin-right: 78px; z-index: 2; }
 slideshow-component.slider-mobile-gutter .slideshow__controls .slider-counter__link--dots .dot { width: 24px; height: 24px; }

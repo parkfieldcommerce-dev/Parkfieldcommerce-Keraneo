@@ -5,7 +5,39 @@
             <div class="faq">
                 <details class="faq-card">
                     <summary class="faq-item"><p>{{ block.settings.question }}</p><div class="faq-open-icon">+</div></summary>
-                    <p class="faq-card-spoiler">{{ block.settings.answer }} </p>
+                    <div class="faq-card-spoiler">{{ block.settings.answer }} </div>
+                    <div class="image-list">
+                        {% if block.settings.image1 != blank %}
+                            <img src="{{ block.settings.image1 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image2 != blank %}
+                            <img src="{{ block.settings.image2 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image3 != blank %}
+                            <img src="{{ block.settings.image3 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image4 != blank %}
+                            <img src="{{ block.settings.image4 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image5 != blank %}
+                            <img src="{{ block.settings.image5 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image6 != blank %}
+                            <img src="{{ block.settings.image6 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image7 != blank %}
+                            <img src="{{ block.settings.image7 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image8 != blank %}
+                            <img src="{{ block.settings.image8 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image9 != blank %}
+                            <img src="{{ block.settings.image9 | image_url: width: 100 }}">
+                        {% endif %}
+                        {% if block.settings.image10 != blank %}
+                            <img src="{{ block.settings.image10 | image_url: width: 100 }}">
+                        {% endif %}
+                    </div>
                 </details>
             </div>
         {% endfor %}
@@ -35,9 +67,59 @@
                     "label": "Question"
                 },
                 {
-                    "type": "textarea",
+                    "type": "richtext",
                     "id": "answer",
                     "label": "Answer"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image1",
+                    "label": "Image1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image2",
+                    "label": "Image2"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image3",
+                    "label": "Image3"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image4",
+                    "label": "Image4"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image5",
+                    "label": "Image5"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image6",
+                    "label": "Image6"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image7",
+                    "label": "Image7"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image8",
+                    "label": "Image8"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image9",
+                    "label": "Image9"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image10",
+                    "label": "Image10"
                 }
             ]
         }

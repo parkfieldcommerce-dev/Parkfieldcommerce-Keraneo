@@ -70,6 +70,7 @@ h2.section-heading {
   .header-main-width { max-width: 1685px !important; margin: 0 auto !important; }
 }
 @media (min-width: 1440px) {
+  slideshow-component .slideshow.banner { height: 690px; }
   header.header { padding: 20px 0px 20px; }
 }
 @media (min-width: 1024px) {
@@ -94,6 +95,17 @@ h2.section-heading {
 #shopify-section-header .header__active-menu-item { text-decoration: underline #191816 3px; }
 @media (max-width: 768px) {
   #shopify-section-header sticky-header.header-wrapper header .header__heading { width: 125px; margin-left: 32px; }
+  #shopify-section-header sticky-header.header-wrapper header { position: relative; padding-top: 20px; padding-bottom: 20px; }
+  #shopify-section-header sticky-header.header-wrapper header header-drawer { position: absolute; right: 50px; }
+  #shopify-section-header sticky-header.header-wrapper header .header__heading { margin-left: 0px; }
+  #shopify-section-header sticky-header.header-wrapper header .header__icons { display: none; }
+  #menu-drawer { margin-left: 94px; }
+  #shopify-section-header .menu-drawer-container { background: #191816; border-radius: 12px; }
+  #shopify-section-header .menu-drawer-container svg { color: #fff; }
+}
+@media (max-width: 750px) {
+  #shopify-section-header sticky-header.header-wrapper header header-drawer { right: 15px; }
+  #menu-drawer { margin-left: 59px; }
 }
 /*! End header style css */
 

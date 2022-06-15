@@ -48,7 +48,7 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
-                    placeholder=""
+                    placeholder="Votre email"
                     required
                   >
                   <!-- <label class="field__label" for="NewsletterForm--{{ section.id }}">
@@ -56,6 +56,7 @@
                   </label> -->
                   <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
                     <!-- {% render 'icon-arrow' %} -->
+                    ENVOYER
                   </button>
                 </div>
                 {%- if form.errors -%}

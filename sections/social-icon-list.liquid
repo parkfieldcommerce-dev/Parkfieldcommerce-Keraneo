@@ -2,7 +2,7 @@
     <ul class="icon-list">
         {% for block in section.blocks%}
             <li>
-                <a href="{% if block.settings.url != blank%}{{ block.settings.url }}{% else %}Javascript:;{% endif %}">
+                <a href="{% if block.settings.url != blank%}{{ block.settings.url }}{% else %}Javascript:;{% endif %}" target="_blank">
                     {% if block.settings.icon != blank%}
                         <img src="{{ block.settings.icon | image_url : width: 100  }}">
                     {% endif %}

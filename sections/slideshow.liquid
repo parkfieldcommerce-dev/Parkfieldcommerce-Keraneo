@@ -122,8 +122,8 @@
               <div class="banner__text" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank -%}
+            {%- endif -%} -->
+            <!-- {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
                 <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
@@ -141,6 +141,11 @@
             {%- endif -%}
             {%- if block.settings.slide_title2 != blank -%}
             <h1 class="banner__heading">{{ block.settings.slide_title2 | escape }}</h1>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <div class="banner__buttons">
+                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="btn {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+              </div>
             {%- endif -%}
           </div>
         </div>

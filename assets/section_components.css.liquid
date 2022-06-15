@@ -149,6 +149,7 @@
 .cd-image-container img {
     display: block;
     width: 100%;
+    height: 100%;
 } 
 .cd-image-label {
     position: absolute;
@@ -481,10 +482,13 @@
     width: 50%;
     line-height: 40px;
     margin: 0 auto;
- }
-.newsletter .field:after { position: relative; }
-.newsletter input.field_form_input {  width: 373px; height: 62px; }
-.newsletter button.newsletter-form__button { width: 200px; height: 62px; background-color: #648381 !important; }
+}
+.newsletter .field:after { position: relative; box-shadow: none; }
+.newsletter input.field_form_input {  width: 373px; height: 62px; padding-left: 10px; padding-top: 6px; }
+.newsletter input.field_form_input::placeholder {
+    font-family: "Archivo Narrow"; font-size: 22px; font-weight: bold; color: #000;
+}
+.newsletter button.newsletter-form__button { width: 200px; height: 62px; background-color: #648381 !important;  font-family: "Archivo Narrow"; font-size: 26px; font-weight: bold; color: #fff; }
 @media (max-width: 1023px) {
     .newsletter .newsletter__wrapper h2{ 
         width: 100%;
@@ -1458,7 +1462,9 @@ section.faq-section .faq-aftertext {
 text-align: center;
 color: #8b8b9a;
 }
+section.faq-section .image-list img { margin: 50px 6px; }
 @media (max-width: 768px) {
+    section.faq-section .image-list img { margin: 10px 6px; }
     section.faq-section details>summary p {
         font-size: 16px;
         padding-right: 20px;
@@ -1483,3 +1489,64 @@ color: #8b8b9a;
     .product-review-section .product-review-button { text-align: center; }
 }
 /* End Product Review Custom Style CSS */
+
+/* End image-with-checktext Custom Style CSS */
+.image_with_checktext { text-align: center; padding-top: 35px;}
+.image_with_checktext .section-content { display: flex; text-align: left; }
+.image_with_checktext .button {  margin-top: 130px; margin-bottom: 50px; }
+.image_with_checktext .button a.btn { color: #fff; }
+.image_with_checktext .text-group { width: 50%; position: relative;}
+.image_with_checktext h2.image-with-text__heading {  
+    font-family: "Archivo Narrow";
+    font-size: 38px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 27px 0px;
+}
+.image_with_checktext .image-with-text__text {  display: flex; margin-bottom: 22px; }
+.image_with_checktext .image-with-text__text p {  
+    font-family: "Sofia Pro";
+    font-size: 22px;
+    font-weight: 100; 
+    line-height: 31px;
+}
+.image_with_checktext .image-with-text__text span.check-mark{
+    color: #C46D5E;
+    font-size: 27px;
+    font-weight: bold;
+    margin-right: 35px;
+}
+.image_with_checktext .image-with-text__text span.check-mark::before {
+    /*positioning:*/
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    /*styling:*/
+    transform: rotate(45deg);
+    height: 0.8em;
+    width: 0.43em;
+    border-bottom: 0.15em solid;
+    border-right: 0.15em solid;
+}
+@media (max-width: 1023px) 
+{
+    .image_with_checktext { padding-top: inherit;}
+    .image_with_checktext .button {  margin: 0px; }
+    .image_with_checktext .section-content { display: block; }
+    .image_with_checktext .text-group { width: 100%; }
+    .image_with_checktext .image-with-text__text span.check-mark {
+        color: #c46d5e;
+        font-size: 18px;
+        font-weight: 700;
+        margin-right: 26px;
+        margin-top: 8px;
+    }
+}
+@media (max-width: 425px) 
+{
+    .image_with_checktext h2.image-with-text__heading { font-size: 30px; }
+    .image_with_checktext .image-with-text__text p { font-size: 18px; }
+    .image_with_checktext .image-with-text__text+.btn { display: flex; margin-top: 30px; }
+}
+/* End image-with-checktext Custom Style CSS */

@@ -20,13 +20,14 @@
                             <h2 class="slide-heading">{{ block.settings.heading }}</h2>
                         {% endif %}
                         <div class="slide_label">
-                            {% if block.settings.label != blank %}
+                            <!-- {% if block.settings.label != blank %}
                                 <span>{{ block.settings.label }}</span>
-                            {% endif %}
+                            {% endif %} -->
+                            <span>{{ block.settings.product.price | money }}</span>
                         </div>
                         <div class="slide_button">
                             {% if block.settings.button_label != blank %}
-                                <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_label }}</a>
+                                <a href="{{ block.settings.product.url }}" class="btn">{{ block.settings.button_label }}</a>
                             {% endif %}
                         </div>
                     </div>
@@ -49,6 +50,11 @@
         "name": "Image With Text Slide",
         "settings": [
             {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
                 "type": "image_picker",
                 "id": "image",
                 "label": "Image"
@@ -65,18 +71,8 @@
             },
             {
                 "type": "text",
-                "id": "label",
-                "label": "label"
-            },
-            {
-                "type": "text",
                 "id": "button_label",
                 "label": "Button Label"
-            },
-            {
-                "type": "url",
-                "id": "button_link",
-                "label": "Button Link"
             }
         ]
     }
