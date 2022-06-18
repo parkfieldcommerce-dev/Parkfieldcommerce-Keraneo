@@ -89,8 +89,8 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-          {%- if block.settings.image -%}
+        <div class="mobile-hide slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+          {%- if block.settings.image != blank -%}
             <img
               srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
               {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
@@ -112,7 +112,17 @@
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
+          <div class="overlay"></div>
         </div>
+        <div class="desktop-hide slideshow__media banner__media media{% if block.settings.mob_image == blank %} placeholder{% endif %}">
+          {%- if block.settings.mob_image != blank -%}
+            <img  src="{{ block.settings.mob_image | image_url: width: 1500 }}">
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          <div class="overlay"></div>
+        </div>
+
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             <!-- {%- if block.settings.heading != blank -%}
@@ -133,14 +143,14 @@
             {%- endif -%}
             {%- if block.settings.slide_logo_title != blank -%}
             <div class="banner__heading banner__text slide_logo_title" {{ block.shopify_attributes }}>
-              <span>{{ block.settings.slide_logo_title | escape }}</span>
+              <span style="color: {{ block.settings.slide_title_color}}">{{ block.settings.slide_logo_title | escape }}</span>
             </div>
             {%- endif -%}
             {%- if block.settings.slide_title1 != blank -%}
-            <h2 class="banner__heading">{{ block.settings.slide_title1 | escape }}</h2>
+            <h2 class="banner__heading" style="color: {{ block.settings.slide_title_color}}">{{ block.settings.slide_title1 | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.slide_title2 != blank -%}
-            <h1 class="banner__heading">{{ block.settings.slide_title2 | escape }}</h1>
+            <h1 class="banner__heading" style="color: {{ block.settings.slide_title_color}}">{{ block.settings.slide_title2 | escape }}</h1>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
@@ -203,7 +213,7 @@
 {
   "name": "t:sections.slideshow.name",
   "tag": "section",
-  "class": "section",
+  "class": "slideshow-secction section",
   "settings": [
     {
       "type": "select",
@@ -316,6 +326,11 @@
         },
         {
           "type": "image_picker",
+          "id": "mob_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "image_picker",
           "id": "slide_logo",
           "label": "Slide Logo Image"
         },
@@ -335,7 +350,13 @@
           "type": "text",
           "id": "slide_title2",
           "default": "Slide Title",
-          "label": "Slide Title"
+          "label": "Slide Title1"
+        },
+        {
+          "type": "color",
+          "id": "slide_title_color",
+          "label": "Slide Title Color",
+          "default": "#fff"
         },
         {
           "type": "text",

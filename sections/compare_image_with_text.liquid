@@ -2,21 +2,32 @@
     {% if section.settings.heading != blank %}
         <h2 class="section-heading">{{ section.settings.heading }}</h2>
     {% endif %}
-    <div class="section-content">
+    <div class="section-content {% if section.settings.space_line == 'yes'%}space-line{% endif %} {{ section.settings.image_position }}" >
         <div class="compare-image-group {% if section.settings.image_position == 'image_right'%}ipad-show{% else %}desktop-show{% endif %}">
-            <figure class="cd-image-container">
+            <!-- <figure class="cd-image-container">
                 {% if section.settings.after_image != blank %}
                     <img src="{{ section.settings.after_image | image_url: width: 700 }}" alt="Modified Image">
                 {% endif %}
                 <span class="cd-image-label" data-type="modified"></span>
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
+                <div class="cd-resize-img">
                     {% if section.settings.before_image != blank %}
                         <img src="{{ section.settings.before_image | image_url: width: 700 }}" alt="Original Image">
                     {% endif %}
                     <span class="cd-image-label" data-type="original"></span>
                 </div>
                 <span class="cd-handle"></span>
-            </figure>
+            </figure> -->
+            <div class="beer-slider" data-beer-label="" data-start="50">
+                {% if section.settings.after_image != blank %}
+                    <img src="{{ section.settings.after_image | image_url: width: 700 }}" alt="Modified Image">
+                {% endif %}
+                  <div class="beer-reveal" data-beer-label="">
+                    {% if section.settings.before_image != blank %}
+                        <img src="{{ section.settings.before_image | image_url: width: 700 }}" alt="Original Image">
+                    {% endif %}
+                  </div>
+            </div>
+
         </div>
         <div class="text-group {% if section.settings.space_line == 'yes'%}space-line{% endif %} {{ section.settings.image_position }}">
             {%- for block in section.blocks -%}
@@ -38,19 +49,31 @@
             </div>    
         </div>
         <div class="compare-image-group {% if section.settings.image_position == 'image_right'%}desktop-show{% else %}ipad-show{% endif %}">
-            <figure class="cd-image-container">
+            <!-- <figure class="cd-image-container">
                 {% if section.settings.after_image != blank %}
                     <img src="{{ section.settings.after_image | image_url: width: 700 }}" alt="Modified Image">
                 {% endif %}
                 <span class="cd-image-label" data-type="modified"></span>
-                <div class="cd-resize-img"> <!-- the resizable image on top -->
+                <div class="cd-resize-img"> 
                     {% if section.settings.before_image != blank %}
                         <img src="{{ section.settings.before_image | image_url: width: 700 }}" alt="Original Image">
                     {% endif %}
                     <span class="cd-image-label" data-type="original"></span>
                 </div>
                 <span class="cd-handle"></span>
-            </figure>
+            </figure> -->
+
+            <div class="beer-slider" data-beer-label="" data-start="50">
+                {% if section.settings.after_image != blank %}
+                    <img src="{{ section.settings.after_image | image_url: width: 700 }}" alt="Modified Image">
+                {% endif %}
+                  <div class="beer-reveal" data-beer-label="">
+                    {% if section.settings.before_image != blank %}
+                        <img src="{{ section.settings.before_image | image_url: width: 700 }}" alt="Original Image">
+                    {% endif %}
+                  </div>
+            </div>
+            
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
-<div class="shopify-page-section">
+<div class="shopify-page-section page-width">
     <h2 class="section-heading">{{ section.settings.heading }}</h2>
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper desktop-hide">
         <div class="swiper-wrapper">
             {% for block in section.blocks %}
                 <div class="swiper-slide">
@@ -18,6 +18,27 @@
                     </div>
                     <a href="{{ block.settings.product.url }}" class="product-collection-button">{{ block.settings.button_label }}</a>
                 </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="mobile-hide">
+        <div class="product-item-box ">
+            {% for block in section.blocks %}
+            <div class="product-item">
+                <div class="product-image">
+                    {% if block.settings.product_image != blank %}
+                        <img src="{{ block.settings.product_image | image_url: width:500 }}">
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {% endif %}
+                </div>
+                <span class="collection-name">{{ block.settings.collection_name }}</span>
+                <h4 class="product_title">{{ block.settings.product.title }}</h4>
+                <div class="product-price">
+                    <span>{{ block.settings.product.price | money }}</span>
+                </div>
+                <a href="{{ block.settings.product.url }}" class="product-collection-button">{{ block.settings.button_label }}</a>
+            </div>
             {% endfor %}
         </div>
     </div>

@@ -29,6 +29,7 @@
 
     {% render 'meta-tags' %}
     
+    <script src="{{ 'BeerSlider.js' | asset_url }}"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
@@ -205,6 +206,7 @@
     {%- endif -%}
 
     <!-- Include custom style css, begin -->
+    {{ 'BeerSlider.css' | asset_url | stylesheet_tag }}
     {{ 'bootstrap4.1.3.min.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 

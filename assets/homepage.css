@@ -1,8 +1,9 @@
 .social_icon_list {
-    margin-top: -118px;
+    margin-top: -73px;
 }
 
-#shopify-section-template--16061439803646__compare_image_with_text .cd-image-container { width: 65%; }
+#shopify-section-template--16061439803646__compare_image_with_text .beer-reveal>img:first-child, 
+#shopify-section-template--16061439803646__compare_image_with_text .beer-slider>img { width: 350px; }
 #shopify-section-template--16061439803646__compare_image_with_text .cd-handle { background-size: 20px 16px; height: 38px; width: 38px; }
 #shopify-section-template--16061439803646__testimonials h2.section-heading { margin: 68px 0px 39px; }
 

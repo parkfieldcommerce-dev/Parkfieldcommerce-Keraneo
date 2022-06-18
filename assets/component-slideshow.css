@@ -208,19 +208,28 @@ slideshow-component:not(.page-width) .slider-buttons {
 /* Begin Slideshow Custom Style CSS */
 .slideshow__slide .slideshow__text.banner__box { max-width: 105rem; }
 .slideshow__slide .banner__heading { font-family: 'Archivo Narrow;' color: #fff; text-transform: uppercase; margin: 0px; margin-bottom: 4px;}
-.slideshow__slide .slide_logo_title span { font-size: 19px; color: #fff; }
-.slideshow__slide h2.banner__heading { font-size: 50px; font-weight: bold; color: #fff;}
-.slideshow__slide h1.banner__heading { font-size: 80px; font-weight: bold; margin-top: -29px; color: #fff;}
-.slideshow__slide .banner__buttons a.btn { background: #191816; color: #fff;}
+.slideshow__slide .slide_logo_title span { font-size: 19px; }
+.slideshow__slide h2.banner__heading { font-size: 50px; font-weight: 600;}
+.slideshow__slide h1.banner__heading { font-size: 77px; font-weight: 700; margin-top: -25px;}
+.slideshow__slide .banner__buttons a.btn { background: #191816; color: #fff; border-radius: 0;}
 slideshow-component.slider-mobile-gutter .slideshow__controls button.slider-button { display: none; }
-slideshow-component.slider-mobile-gutter .slideshow__controls { bottom: 102px; border: none; display: flex; justify-content: end; margin-right: 78px; z-index: 2; }
-slideshow-component.slider-mobile-gutter .slideshow__controls .slider-counter__link--dots .dot { width: 24px; height: 24px; }
+slideshow-component.slider-mobile-gutter .slideshow__controls { bottom: 340px; border: none; display: flex; justify-content: end; margin-right: 78px; z-index: 2; }
+slideshow-component.slider-mobile-gutter .slideshow__controls .slider-counter__link--dots .dot { width: 20px; height: 20px; }
 slideshow-component.slider-mobile-gutter button:focus { outline: none; }
+
+/* Begin Custom Style Css For Slide */
+#Slide-template--16061439803646__1654421214b3c449d1-2 .banner__buttons a.btn { background: transparent; background: transparent; border: solid 1px; }
+#Slide-template--16061439803646__1654421214b3c449d1-2 .overlay{ position: absolute; width: 100%; height: 100%; top: 0; right: 0; left: 0; background: rgb(0 0 0 / 72%); }
+/* End Custom Style Css For Slide */
+
+@media (max-width: 1440px) {
+  slideshow-component.slider-mobile-gutter .slideshow__controls { bottom: 140px; }
+}
 @media (max-width: 768px) {
-  .slideshow__slide img.slide-logo { width: 40px; }
+  .slideshow__slide img.slide-logo { width: 55px; }
   .slideshow__slide .slide_logo_title span { font-size: 13px; color: #fff; }
-  .slideshow__slide h2.banner__heading { font-size: 18px; }
-  .slideshow__slide h1.banner__heading { font-size: 30px; margin-top: -6px; }
+  .slideshow__slide h2.banner__heading { font-size: 16px; font-weight: bold; }
+  .slideshow__slide h1.banner__heading { font-size: 43px; margin-top: -6px; }
   slideshow-component.slider-mobile-gutter .slideshow__controls { bottom: 50px; justify-content: center; margin-right: 0px; }
   slideshow-component.slider-mobile-gutter .slideshow__controls .slider-counter__link--dots .dot { width: 14px; height: 14px; }
 }
