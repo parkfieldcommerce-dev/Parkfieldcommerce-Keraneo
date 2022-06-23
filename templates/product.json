@@ -113,9 +113,64 @@
         "padding_top": 36,
         "padding_bottom": 12
       }
+    },
+    "social-icon-list": {
+      "type": "social-icon-list",
+      "settings": {}
+    },
+    "compare_image_with_text": {
+      "type": "compare_image_with_text",
+      "settings": {}
+    },
+    "multicolumn-slide": {
+      "type": "multicolumn-slide",
+      "settings": {}
+    },
+    "custom-image-with-text": {
+      "type": "custom-image-with-text",
+      "settings": {}
+    },
+    "video-with-step": {
+      "type": "video-with-step",
+      "settings": {}
+    },
+    "product-review": {
+      "type": "product-review",
+      "settings": {}
+    },
+    "image_with_checktext": {
+      "type": "image_with_checktext",
+      "settings": {}
+    },
+    "satisfaction": {
+      "type": "satisfaction",
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {}
+    },
+    "discover": {
+      "type": "discover",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "social-icon-list",
+    "compare_image_with_text",
+    "multicolumn-slide",
+    "custom-image-with-text",
+    "video-with-step",
+    "product-review",
+    "image_with_checktext",
+    "satisfaction",
+    "faq",
+    "testimonials",
+    "discover"
   ]
 }
